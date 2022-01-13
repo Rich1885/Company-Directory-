@@ -1,0 +1,98 @@
+/*Navbar*/
+.navbar .navbar-toggler {
+  color: #5bc0de !important;
+  border-color:	#5bc0de !important;
+}
+ .navbar-toggler-icon {
+  color:	#5bc0de !important;
+}
+/* Search*/
+.search {
+position: relative;
+}
+
+.search input {
+border-radius: 5px;
+}
+
+.search input:focus {
+box-shadow: none;
+border: 2px solid #5bc0de;
+}
+/*Employee Table*/
+.table {
+border-radius: 8px;
+border: 1px solid black;
+}
+.table tbody {
+background: lightgrey;
+}
+
+.table thead {
+background: black;
+color: 	#5bc0de;
+}
+
+.employeeTable th {
+font-weight: bold;
+}
+
+.employeeTable tbody tr:hover {
+background: 	#5bc0de;
+color: black;
+}
+/*Modal*/
+.modal-content {
+  background-color: black !important;
+  color:	#5bc0de !important;
+}
+.modal-body {
+  background-color: black !important;
+  color:	#5bc0de !important;
+}
+.modal-content{
+  border: solid 2px white;
+}
+/*Delete Modals*/
+#deleteEmployeeModal .modal-dialog {
+margin-top: 35vh;
+border: 3px solid red;
+}
+#deleteDepartmentModal .modal-dialog {
+  margin-top: 35vh;
+  border: 3px solid red;
+}
+#deleteLocationModal .modal-dialog{
+  margin-top: 35vh;
+  border: 3px solid red;
+}
+/*Department/Location Cards*/
+.departmentDisplay {
+margin: 10px;
+max-width: 100%;
+width: 250px;
+border: 2px solid black;
+border-radius: 5px;
+background-color: black;
+color:#5bc0de;
+}
+.locationDisplay {
+  margin: 10px;
+  max-width: 100%;
+  width: 250px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color:#5bc0de;
+}
+/*Modal Forbidden Department & Location*/
+#forbiddenDepartmentModal .modal-header {
+background: red;
+color: black;
+}
+
+#forbiddenLocationModal .modal-header {
+background: red;
+color: black;
+}
+
