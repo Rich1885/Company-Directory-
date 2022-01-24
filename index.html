@@ -13,7 +13,10 @@
         <link href="libs/css/style.css" rel="stylesheet">
     </head>
 
-    <body>
+        <body>
+            <div class="loader-container">
+                <div class="loader"></div>
+            </div>
         <!-- navbar -->
         <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
             <div class="container-fluid">
@@ -57,12 +60,12 @@
                 </div>
                         <div class="container table-responsive">
                             <table id="employeeTable" class="employeeTable table table-hover">
-                                <thead class="thead-dark justify-content-between">
+                                <thead   class=" thead-dark justify-content-between">
                                     <tr>
-                                        <th>FIRST NAME</th>
-                                        <th>LAST NAME</th>
-                                        <th>DEPARTMENT</th>
-                                        <th>LOCATION</th>
+                                        <th class="header" scope="col">FIRST NAME</th>
+                                        <th class="header" scope="col">LAST NAME</th>
+                                        <th class="header" scope="col">DEPARTMENT</th>
+                                        <th class="header" scope="col">LOCATION</th>
                                     </tr>
                                 </thead>
                                 <tbody id="employeeTbody"></tbody>
@@ -180,10 +183,6 @@
                                         <div class="mb-2 form-group">
                                             <label>Department</label>
                                             <select class="form-select" id="selectDepEditEmpModal"></select>
-                                        </div>
-                                        <div class="mb-2 form-group no-arrow">
-                                            <label>Location</label>
-                                            <select class="form-select" id="selectLocEditEmpModal" disabled></select>
                                         </div>
                                     </form>	
                                 </div>			

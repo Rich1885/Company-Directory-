@@ -1,3 +1,9 @@
+$(window).on("load", function() {
+    $(".loader-container").fadeOut("1000");
+    getEmployeesTable();
+    getDepartmentsTable();
+    getLocationsTable();
+});
 $("#employeesPage").on("click", function() {
     $(this).addClass("d");
     $("#departmentsPage").removeClass("d");
@@ -57,6 +63,7 @@ function getEmployeesTable() {
 
 getEmployeesTable();
 
+
 function getDepartmentsTable() {
     $.ajax({
         url: "libs/php/getAllDepartments.php",
@@ -69,6 +76,9 @@ function getDepartmentsTable() {
                 departmentCards.html("");
                 let selectDepAddEmpModal = $("#selectDepAddEmpModal");
                 selectDepAddEmpModal.html("");
+                
+                
+                
                 let selectDepEditEmpModal = $("#selectDepEditEmpModal");
                 selectDepEditEmpModal.html("");
                 departments.forEach(department => {
@@ -78,7 +88,6 @@ function getDepartmentsTable() {
                                                 </div>
                                                     <div class="card-body">
                                                         <h6 class="card-title department-name text-center mb-3"><strong>${department.name}</strong></h6>
-                                                        <h6 class="card-title text-center mb-3"><strong>Location: ${department.location}</strong></h6>
                                                         <div class="text-center">
                                                             <button class="btn btn-outline-info editDep" type="button"
                                                                 data-departmentid="${department.id}"
@@ -206,7 +215,7 @@ $(".table").on("click", "tr[role='button']", function() {
                                             <div class="employee-details-card card p-2">
 
                                                 <div class="employee-profile-photo text-center">
-                                                    <img src="images/profile.png" class="card-img-top" alt="employee-foto">
+                                                    <img src="images/profile.png" class="card-img-top"  alt="employee-foto">
                                                 </div>
 
                                                 <div class="d-flex justify-content-center mt-3">
@@ -526,7 +535,7 @@ $("#deleteLocationBtn").on("click", function() {
 
 $("#searchEmployee").on("keyup", function() {
     let rows = $("#employeeTbody tr");
-    let val = $.trim($(this).val()).replace(/ +/g, " ").toLowerCase();
+    let val = ($(this).val()).replace(/ +/g, " ").toLowerCase();
 
     rows.show().filter(function() {
         var text = $(this).text().replace(/\s+/g, " ").toLowerCase();
